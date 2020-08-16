@@ -4,6 +4,7 @@
   "description": "Guilddy is a Discord bot that helps Discord server owners and moderators in day-to-day tasks.",
   "main": "build/index.js",
   "scripts": {
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,8 +26,10 @@
     "typeorm": "^0.2.25"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.12",
     "@types/restify": "^8.4.2",
     "@types/socket.io": "^2.1.11",
+    "chai": "^4.2.0",
     "mocha": "^8.1.1",
     "nyc": "^15.1.0",
     "typescript": "^3.9.7"

@@ -3,9 +3,10 @@
         "module": "ES2020",
         "noImplicitAny": true,
         "preserveConstEnums": true,
+        "outDir": "build",
         "sourceMap": true
     },
     "include": [
-        "src/**.ts"
+        "src/**/*.ts"
     ]
 }
