@@ -45,21 +45,21 @@ public class SomeModule extends SomeOtherModule, SomeInterface {
 
 ### File Names
 
-File names of module files are their class name in `kebab case` which is lowercase with dashes (`-`) before a capital letter of the class name. File names always start and end with a letter. There may be no other punctuation in module file names. Numbers are treated as capital letters in this section.
+File names are their class name in `kebab case` which is lowercase with dashes (`-`) before a capital letter of the class name. File names always start and end with a letter. There may be no other punctuation in module file names. Numbers are treated as capital letters in this section.
 
 Following that rule, a module with the class name `SomeModule` would be placed in a file called `some-module.ts`.
 
-However, there is a special case. That is when you have a series of capital letters as in an abbreviation. In that case, the whole series of capital letters, except for the last one if it is the beginning of a new part, are not separated by dashes except where necessary to emphasize the actual meaning of an abbreviation.
+However, there is a special case. That is when you have a series of capital letters as in an abbreviation. In that case, the whole series of capital letters are considered one word and therefore not separated by dashes except where necessary to emphasize the actual meaning of an abbreviation.
 
 Therefore, a module with the class name `SomeRESTConnector` would be placed in a file named `some-rest-connector.ts` and a module with the class name `SomeConnectorREST` would be placed in `some-connector-rest.ts`. Where an abbreviation might require some more clarification (like `SMTP2FTPConnector`, which would be `smtp-2-ftp-connector`), or there are hybrid words in your module names (like `RESTful`, which would be `restful`) this rule may be bent in favor of clarification.
 
 Of course, it would be better to just avoid this where possible. Maintainers or reviewers may go ahead and ask you to rename your module if rule bending could have been avoided.
 
-### Module Names
+### Class Names
 
-Modules are named in `upper camel case` and, if extending an existing module, must follow their super class' naming scheme.
+Classes are named in `upper camel case` and, if extending an existing class, must follow their super class' naming scheme.
 
-Modules are named in a way that represents their functional responsibility. That means that a connector has `Connector` in its name and an action has `Action` in its name.
+Classes are named in a way that represents their functional responsibility. That means that a connector has `Connector` in its name and an action has `Action` in its name.
 
 When building a module structure where modules used are grouped, modules should be named in a way that their function is in the same position within the same module group. E.g. if the first member of a module group is called `RESTConnector`, the next one that connects to some FTP service is called `FTPConnector` and the module that converts the REST output to general purpose data is called `RESTConverter`, while an import tool might have an interpreter to automatically execute CRUD actions on database entities called `RESTInterpreter`.
 
@@ -179,6 +179,10 @@ There are different ways on how to get a merge for your submitted code (see [Con
 
 ### Code
 
+#### Dependencies
+
+If your code introduces any dependencies or if you are adding a new module that uses dependencies from the main project or any of the submodules, add them to your pull request so it is more clear which addition introduces which dependency and whether or not the dependencies are put where they need to be.
+
 #### Writing Code
 
 You are required to adhere to the rules specified in the [Coding Style](#coding-style) section.
@@ -205,6 +209,10 @@ When submitting a pull request, make use of this template or at least answer eve
 ### Implemented
 
 [Describe the new functionality your code introduces in detail]
+
+### Dependencies
+
+[List the dependencies your code uses to enable more precise dependency management]
 
 ## Remarks
 
