@@ -21,9 +21,11 @@
     "axios": "^0.19.2",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
+    "erlpack": "github:discord/erlpack",
     "restify": "^8.5.1",
     "socket.io": "^2.3.0",
-    "typeorm": "^0.2.25"
+    "typeorm": "^0.2.25",
+    "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",
