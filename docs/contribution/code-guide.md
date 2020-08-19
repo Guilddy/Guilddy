@@ -10,7 +10,11 @@ import { SomeOtherModule } from './some-other-module';
 import SomeInterface from './some-interface';
 
 public class SomeModule extends SomeOtherModule, SomeInterface {
-    public static SomeStaticProperty : string = "I'm static";
+    public static SomeStaticProperty : string[] = [
+      "I",
+      "am",
+      "static"
+    ];
 
     public SomeInstanceProperty : string = "I'm in an instance";
     protected SomeProtectedInstanceProperty : string = "I'm still in an instance, bot I am also protected.";
@@ -21,14 +25,14 @@ public class SomeModule extends SomeOtherModule, SomeInterface {
         fs.readFileSync('./some-unused-text-file.txt');
     }
 
-    public static GetStaticProperty() : string {
+    public static GetStaticProperty() : string[] {
         return SomeModule.SomeStaticProperty;
     }
 
     public static CreateNew( newInstanceProperty : string, newPrivateInstanceProperty : string ) : string {
         let newModule = new SomeModule();
         newModule.SomeInstanceProperty = newInstanceProperty;
-        newModule.SetSomePrivateInstanceProperty(newPrivateInstanceProperty);
+        newModule.SetSomePrivateInstanceProperty( newPrivateInstanceProperty );
         return newModule;
     }
 
@@ -67,7 +71,7 @@ When building a module structure where modules used are grouped, modules should 
 
 #### Type Names
 
-Type naming follows the module naming scheme.
+Type naming follows the class naming scheme.
 
 #### Type Definition
 
@@ -75,9 +79,8 @@ Types are defined in different ways depending on how they are intended to be use
 
 1. Types that are intended to be used within a single module, class or module group, are placed in:
     - the same file, inbetween the import section and the class definition, if there are no more than two types to be placed in that file or
-    - a file whichs name corresponds to that of the module they belong to (so types for a module `RESTController` that sits in `rest-controller.ts` will be placed in `rest-controller-types.ts` next to it) if there are three ore more types that are affected by this rule
-2. Types that are intended to be used outside the module group are placed in a `types` directory inside the module group directory and the file name corresponds to their origin module's file name.
-3. Types that are intended for co-usage outside their own module group also follow rule number 2, but their `types` directory is a module on its own to enable bulk import on co-used types.
+    - a file which is named according to that of the module they belong to (so types for a module `RESTController` that sits in `rest-controller.ts` will be placed in `rest-controller-types.ts` next to it) if there are three or more types that are affected by this rule
+2. Types that are intended to be used outside the module are placed in a `types` directory inside the module group directory and the file name corresponds to their type name just like classes.
 
 ### File Layout
 
@@ -122,105 +125,63 @@ A code file follows this outline (in order):
 
 Each of the top level properties in this list is an individual block. These blocks are seperated by a blank line.
 
+A class, type or enum never has a blank line before its closing brace.
+
 ### Class Properties and Methods
 
-Class properties and methods are named in `upper camel case`. And must have an explicit accessibility modifier and type definition. Type definitions with multiple types (such as `object | string`) are always in the following order:
+Class properties and methods are named in `upper camel case` and must have an explicit accessibility modifier and type definition. Type definitions with multiple types (such as `object | string`) are always in the following order:
 
 - Classes (alphabetically sorted)
 - Types (alphabetically sorted)
 - Interfaces (alphabetically sorted)
 
-If the type can not be determined exactly, the closest anticipated type is used. E.g. as data returned by a method may have properties that can not be determined at the time of implementation, that method has a defined return type of `object`. If the method could also return a string, the type of that method becomes `object | string`. The type `any` may only be used if necessary or where the type would be `bigint | boolean | function | number | object | string | symbol | undefined`.
+If the type can not be determined exactly, the closest anticipated type is used. E.g. as data returned by a method may have properties that can not be determined at the time of implementation, that method has a defined return type of `object`. If the method could also return a string, the type of that method becomes `object | string`. The type `any` may only be used if necessary or where the type would be `bigint | boolean | function | number | object | string | symbol | undefined`. Please make sure to commit code with typings as to not forget about typing them later-on.
 
 ### Braces
 
 Opening braces are placed in the same line with a preceeding space. Block content and closing braces are placed based on their content's line count:
 
-- **Multi-line content**: The content starts in the line after the opening braces. Closing braces are on their own line, in the same column as the first non-whitespace character on the opening braces line. (see example code in [Coding Style](#coding-style))
-- **Single-line content**: The content may be treated as a Multi-line block or hav opening braces, content and closing braces placed in the same line, separated by a single space. (`{ value : string }`)
-- **No content / Empty braces**: Opening and closing braces are on the same line, separated by a single space. (`{ }`)
+- **Multi-line content**: The content starts in the line after the opening braces. Closing braces are on their own line, in the same column as the first non-whitespace character on the opening braces line (see example code in the [Coding Style](#coding-style) section).
+- **Single-line content**: The content may be treated as a Multi-line block or have opening braces, content and closing braces placed in the same line, separated by a single space (`{ value : string }`).
+- **No content / Empty braces**: Opening and closing braces are on the same line, separated by a single space (`{ }`).
 
 ### Parenthesis
 
+- **normal behaviour**: Usually, parenthesis and their content should be placed on a single line with the content and parenthesis spaced out when not empty (`SetSomePrivateInstanceProperty( newPrivateInstanceProperty )` or `SomeModule()`). Control structures also have a preceding space before the parenthesis (`if ( true )`).
+- **long/complex statements**: If a statement is overly long or complex, the content may be split into multiple lines behaving as they were braces. This rule does not apply to method signatures which are always in a single line.
+
+A statement may be considered overly long if it exceeds 150 characters and has at least three semantic segments.
+
+A statement may be considered overly complex if it has a nested structure with at least two semantic segments.
+
 ### Brackets
+
+- **Multi-line content**: The content starts in the line after the opening brackets. Closing brackets are on their own line, in the same column as the first non-whitespace character on the opening brackets line (see example code in the [Coding Style](#coding-style) section).
+- **Single-line content (initializer)**: The content may be treated as a Multi-line block or have opening brackets, content and closing brackets placed in the same line, separated by a single space (`[ 1 ]` or `[ 1, 2, 3 ]`).
+- **Single-line content (indicator/accessor)**: The opening brackets, content and closing brackets are placed in direct succession (`[1]`) with no preceeding space before the opening brace.
+- **No content / Empty brackets (initializer)**: Opening and closing initializer brackets are on the same line, separated by a single space (`[ ]`).
+- **No content / Empty brackets (indicator)**: Opening and closing indicator brackets are on the same line (`[]`) with no preceeding space before the opening brace.
 
 ### Line Breaks
 
-Line breaks are UNIX standard line breaks (CR / `\n`) in the repository.
+Line breaks are UNIX standard line breaks (LF / `\n`) in the repository.
 
 It's up to you to use other line endings in your working directory but files need to be committed using UNIX standard `\n` line breaks only.
 
 Any file committed to the repository must also end with a new line.
 
-### Local Variables
+### Variables and Constants
 
-## Contribution Roles
+Variables and Constants are named in `lower camel case` and do not need a strict type.
 
-This project has a set of roles for contributors other than just the maintainers and main developers who are responsible for this project. There are 4 different contribution roles for this project.
+The preferred method of creating constants is locally using `const`.
 
-- Reporter (people who submit bug reports, problem reports or feature requests)
-- Fiddler (people who forked the repository to fiddle for their own guild, game or for whatever other purpose with the intent of using it or contributing to the main repository later-on)
-- Contributor (people who have submitted at least one legitimate merge request)
-- Moderator (people who are here to reiew code and issues; these people are actually being picked by maintainers and have to be accepted in order to get this role)
+The preferred method of creating variables is locally using `let`.
 
-The list above does not directly indicate a ranking by list item position and does not necessarily correspond to the project's Discord server roles.
+If you want to create re-usable variables and constants on a greater scale, use class properties instead.
 
-## Code Review
-
-There are different ways on how to get a merge for your submitted code (see [Contribution](#contribution) for information on how to submit code and which rules to follow when doing so) accepted. In order to get your code accepted, it must be reviewed in one of the following ways:
-
-- by at least one maintainer (a maintainer may not merge their own code) or
-- two main developers or
-- two moderators and a main developer
-
-## Contribution
-
-> In case you want to contribute to this project, pick a role from [Contribution Roles](#contribution-roles) first and then read up all information on how to contribute in your role in the contribution document.
-
-### Code
-
-#### Dependencies
-
-If your code introduces any dependencies or if you are adding a new module that uses dependencies from the main project or any of the submodules, add them to your pull request so it is more clear which addition introduces which dependency and whether or not the dependencies are put where they need to be.
-
-#### Writing Code
-
-You are required to adhere to the rules specified in the [Coding Style](#coding-style) section.
-
-If there is a reason you can not adhere to any of these rules, please provide an explanation in your pull request according to the [Pull Request](#pull-request) section.
-
-> Remeber: Code needs to be documented and tested. Code that does not have tests is treated as WiP and not reviewed until you notify a maintainer of having finished your pull request.
-
-#### Pull Request
-
-When submitting a pull request, make use of this template or at least answer everything in this template so your code can be reviewed properly.
-
-```MD
-## Purpose
-
-[Specify the purpose of your pull request. This includes which feature request or issue this tries to resolve.]
-
-## Functionality
-
-### Changes
-
-[Describe the changes your pull request makes to the functionality of existing components in detail]
-
-### Implemented
-
-[Describe the new functionality your code introduces in detail]
+**There are no global variables or constants to be added outside of main module initializations.**
 
 ### Dependencies
 
-[List the dependencies your code uses to enable more precise dependency management]
-
-## Remarks
-
-[Add any information that you may want (or - maybe due to other rules or conventions - need) to be in your pull request here]
-```
-
-If your pull request is still a work in progress, please flag it as a work in progress (also called a `draft` on GitHub), please make sure it is a `Draft` instead of a full pull request. You may have your `Notes` section either as the top-most or bottom-most section in your pull request's body marked with the corresponding header:
-
-```MD
-## Notes
-```
+If your code introduces any dependencies or if you are adding a new module that uses dependencies from the main project or any of the submodules, add them to your pull request so it is more clear which addition introduces which dependency and whether or not the dependencies are put where they need to be.
