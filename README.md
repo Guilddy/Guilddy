@@ -2,7 +2,7 @@
 
 Guilddy is a Discord bot that helps Discord server owners and moderators in day-to-day tasks.
 
-![Node.js CI](https://github.com/JDThralls/Guilddy/workflows/Node.js%20CI/badge.svg) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FJDThralls%2FGuilddy.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FJDThralls%2FGuilddy?ref=badge_shield)
+[![Node.js CI](https://github.com/Guilddy/Guilddy/workflows/Node.js%20CI/badge.svg)](https://github.com/Guilddy/Guilddy/actions) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FGuilddy%2FGuilddy.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FGuilddy%2FGuilddy?ref=badge_shield)
 
 ## Features
 
@@ -20,4 +20,4 @@ Contribution is currently closed. At some point, we will release the contributio
 
 ## License Scan
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FJDThralls%2FGuilddy.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FJDThralls%2FGuilddy?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FGuilddy%2FGuilddy.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FGuilddy%2FGuilddy?ref=badge_shield)
