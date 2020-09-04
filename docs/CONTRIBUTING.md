@@ -13,9 +13,17 @@ This project has a set of roles for contributors other than just the maintainers
 
 **Disclaimer**: This list does not indicate a ranking by list item position.
 
+## Report a Bug or Problem
+
+To submit a bug or problem report, please refer to our [guide on issues](./contribution/issues.md), especially the [Bugs and Problems section](./contribution/issues.md#bugs-and-problems).
+
+## Request a Feature
+
+To submit a feature request, please refer to our [guide on issues](./contribution/issues.md), especially the [Features section](./contribution/issues.md#features).
+
 ## Code Review
 
-There are different ways on how to get a merge for your submitted code (see [Contribution](#contribution) for information on how to submit code and which rules to follow when doing so) accepted. In order to get your code accepted, it must be reviewed in one of the following ways:
+There are different ways on how to get a merge for your submitted code (see [Pull Request](#pull-request) for information on how to submit code and which rules to follow when doing so) accepted. In order to get your code accepted, it must be reviewed in one of the following ways:
 
 - by at least one maintainer (a maintainer may not merge their own code) or
 - two main developers or
@@ -25,13 +33,13 @@ There are different ways on how to get a merge for your submitted code (see [Con
 
 ### Writing Code
 
-You are required to adhere to the rules specified in the [Coding Style](./code-guide.md#coding-style) section.
+You are required to adhere to the rules specified in the [Coding Style](./contribution/code-guide.md#coding-style) section.
 
 If there is a reason you can not adhere to any of these rules, please provide an explanation in your pull request according to the [Pull Request](#pull-request) section.
 
 > Remeber: Code needs to be documented and tested. Code that does not have tests is treated as WiP and not reviewed until you notify a maintainer of having finished your pull request.
 
-## Pull Request
+### Pull Request
 
 When submitting a pull request, make use of this template or at least answer everything in this template so your code can be reviewed properly.
 
