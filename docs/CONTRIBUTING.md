@@ -9,7 +9,7 @@ This project has a set of roles for contributors other than just the maintainers
 - Reporter (people who submit bug reports, problem reports or feature requests)
 - Fiddler (people who forked the repository to fiddle for their own guild, game or for whatever other purpose with the intent of using it or contributing to the main repository later-on)
 - Contributor (people who have submitted at least one legitimate merge request)
-- Moderator (people who are here to reiew code and issues; these people are actually being picked by maintainers and have to be accepted in order to get this role)
+- Moderator (people who are here to review code and issues; these people are actually being picked by maintainers and have to be accepted in order to get this role)
 
 **Disclaimer**: This list does not indicate a ranking by list item position.
 
