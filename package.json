@@ -1,0 +1,39 @@
+{
+  "name": "guilddy",
+  "version": "0.0.1",
+  "description": "Guilddy is a Discord bot that helps Discord server owners and moderators in day-to-day tasks.",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JDThralls/Guilddy.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JDThralls/Guilddy/issues"
+  },
+  "homepage": "https://github.com/JDThralls/Guilddy#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "erlpack": "github:discord/erlpack",
+    "restify": "^8.5.1",
+    "socket.io": "^2.3.0",
+    "typeorm": "^0.2.25",
+    "zlib-sync": "^0.1.7"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/restify": "^8.4.2",
+    "@types/socket.io": "^2.1.11",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "nyc": "^15.1.0",
+    "typescript": "^3.9.7"
+  }
+}
