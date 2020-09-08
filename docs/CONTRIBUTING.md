@@ -15,11 +15,11 @@ This project has a set of roles for contributors other than just the maintainers
 
 ## Report a Bug or Problem
 
-To submit a bug or problem report, please refer to our [guide on issues](./contribution/issues.md), especially the [Bugs and Problems section](./contribution/issues.md#bugs-and-problems).
+To submit a bug or problem report, please refer to our [guide on issues](./contribution/issues.md), especially the [Bug Reports section](./contribution/issues.md#bug-reports).
 
 ## Request a Feature
 
-To submit a feature request, please refer to our [guide on issues](./contribution/issues.md), especially the [Features section](./contribution/issues.md#features).
+To submit a feature request, please refer to our [guide on issues](./contribution/issues.md), especially the [Feature Requests](./contribution/issues.md#feature-request).
 
 ## Code Review
 
@@ -39,36 +39,23 @@ If there is a reason you can not adhere to any of these rules, please provide an
 
 > Remeber: Code needs to be documented and tested. Code that does not have tests is treated as WiP and not reviewed until you notify a maintainer of having finished your pull request.
 
+### Testing
+
+We use [mocha](https://mochajs.org/) for testing. Please write unit tests for code you write. Pull requests might not be approved if the test coverage is too low.
+
 ### Pull Request
 
-When submitting a pull request, make use of this template or at least answer everything in this template so your code can be reviewed properly.
+When submitting a pull request, make use of our `Pull Request` template and fill in as much information as possible into your pull request's body so your code can be reviewed properly.
 
-```MD
-## Purpose
+If your pull request is still a work in progress, use our `Draft Pull Request` template, please make sure it is a `Draft` instead of an open pull request. You may have your `Notes` section either as the top-most or bottom-most section in your draft pull request's body.
 
-[Specify the purpose of your pull request. This includes which feature request or issue this tries to resolve.]
+Please remove the `Notes` section when making your draft an open pull request and make sure you put all information that might be interesting when reviewing the pull request into your `Remarks` section.
 
-## Functionality
+## Developer's Certificate of Origin 1.1
 
-### Changes
+By making a contribution to this project, I certify that:
 
-[Describe the changes your pull request makes to the functionality of existing components in detail]
-
-### Implemented
-
-[Describe the new functionality your code introduces in detail]
-
-### Dependencies
-
-[List the dependencies your code uses to enable more precise dependency management]
-
-## Remarks
-
-[Add any information that you may want (or - maybe due to other rules or conventions - need) to be in your pull request here]
-```
-
-If your pull request is still a work in progress, please flag it as a work in progress (also called a `draft` on GitHub), please make sure it is a `Draft` instead of a full pull request. You may have your `Notes` section either as the top-most or bottom-most section in your pull request's body marked with the corresponding header:
-
-```MD
-## Notes
-```
+- (a) The contribution was created in whole or in part by me and I have the right to submit it under the open source license indicated in the file; or
+- (b) The contribution is based upon previous work that, to the best of my knowledge, is covered under an appropriate open source license and I have the right under that license to submit that work with modifications, whether created in whole or in part by me, under the same open source license (unless I am permitted to submit under a different license), as indicated in the file; or
+- (c) The contribution was provided directly to me by some other person who certified (a), (b) or (c) and I have not modified it.
+- (d) I understand and agree that this project and the contribution are public and that a record of the contribution (including all personal information I submit with it, including my sign-off) is maintained indefinitely and may be redistributed consistent with this project or the open source license(s) involved.

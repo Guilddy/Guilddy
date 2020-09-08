@@ -1,6 +1,6 @@
 ---
-name: Bug report (Self-Hosted)
-about: Create a report to help us improve, use this if you are hosting your own instance
+name: Bug Report (Self-Hosted)
+about: Create a report to help us improve, use this if you are hosting your own instance.
 title: ''
 labels: ''
 assignees: ''
