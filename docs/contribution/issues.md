@@ -8,7 +8,7 @@
 
 ## Issue Types
 
-### Feature Request
+### Feature Requests
 
 Request a feature you want to see in the bot and/or web interface or an enhancement to an existing feature by filling out our issue template `Feature Request`. This way your proposal can be evaluated and maybe put onto our roadmap.
 

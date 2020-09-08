@@ -15,11 +15,11 @@ This project has a set of roles for contributors other than just the maintainers
 
 ## Report a Bug or Problem
 
-To submit a bug or problem report, please refer to our [guide on issues](./contribution/issues.md), especially the [Bugs and Problems section](./contribution/issues.md#bugs-and-problems).
+To submit a bug or problem report, please refer to our [guide on issues](./contribution/issues.md), especially the [Bug Reports section](./contribution/issues.md#bug-reports).
 
 ## Request a Feature
 
-To submit a feature request, please refer to our [guide on issues](./contribution/issues.md), especially the [Features section](./contribution/issues.md#features).
+To submit a feature request, please refer to our [guide on issues](./contribution/issues.md), especially the [Feature Requests](./contribution/issues.md#feature-request).
 
 ## Code Review
 
