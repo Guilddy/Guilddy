@@ -17,8 +17,8 @@ public class SomeModule extends SomeOtherModule, SomeInterface {
     ];
 
     public SomeInstanceProperty : string = "I'm in an instance";
-    protected SomeProtectedInstanceProperty : string = "I'm still in an instance, bot I am also protected.";
-    private SomePrivateInstanceProperty : string = "I'm still in an instance, bot I am also private.";
+    protected SomeProtectedInstanceProperty : string = "I'm still in an instance, but I am also protected.";
+    private SomePrivateInstanceProperty : string = "I'm still in an instance, but I am also private.";
 
     public constructor(){
         // TODO: Review necessity of reading files here
