@@ -39,36 +39,14 @@ If there is a reason you can not adhere to any of these rules, please provide an
 
 > Remeber: Code needs to be documented and tested. Code that does not have tests is treated as WiP and not reviewed until you notify a maintainer of having finished your pull request.
 
+### Testing
+
+We use [mocha](https://mochajs.org/) for testing. Please write unit tests for code you write. Pull requests might not be approved if the test coverage is too low.
+
 ### Pull Request
 
-When submitting a pull request, make use of this template or at least answer everything in this template so your code can be reviewed properly.
+When submitting a pull request, make use of our `Pull Request` template and fill in as much information as possible into your pull request's body so your code can be reviewed properly.
 
-```MD
-## Purpose
+If your pull request is still a work in progress, use our `Draft Pull Request` template, please make sure it is a `Draft` instead of an open pull request. You may have your `Notes` section either as the top-most or bottom-most section in your draft pull request's body.
 
-[Specify the purpose of your pull request. This includes which feature request or issue this tries to resolve.]
-
-## Functionality
-
-### Changes
-
-[Describe the changes your pull request makes to the functionality of existing components in detail]
-
-### Implemented
-
-[Describe the new functionality your code introduces in detail]
-
-### Dependencies
-
-[List the dependencies your code uses to enable more precise dependency management]
-
-## Remarks
-
-[Add any information that you may want (or - maybe due to other rules or conventions - need) to be in your pull request here]
-```
-
-If your pull request is still a work in progress, please flag it as a work in progress (also called a `draft` on GitHub), please make sure it is a `Draft` instead of a full pull request. You may have your `Notes` section either as the top-most or bottom-most section in your pull request's body marked with the corresponding header:
-
-```MD
-## Notes
-```
+Please remove the `Notes` section when making your draft an open pull request and make sure you put all information that might be interesting when reviewing the pull request into your `Remarks` section.
