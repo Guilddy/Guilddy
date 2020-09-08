@@ -8,18 +8,12 @@
 
 ## Issue Types
 
-### Features
+### Feature Request
 
-```MD
-## Description
+Request a feature you want to see in the bot and/or web interface or an enhancement to an existing feature by filling out our issue template `Feature Request`. This way your proposal can be evaluated and maybe put onto our roadmap.
 
-[What kind of user are you (event leader, server owner, guild leader, guild co-leader)? What do you want this to do? Why do you want this?]
+### Bug Reports
 
-## Scope
-
-[What scope do you think will be affected? Leave empty (or use "n/a") if you have no idea]
-```
-
-### Bugs and Problems
+Report a bug, problem, misbehaviour with either our publicly hosted instance or your self-hosted instance and help us do better. Fill out our `Bug Report` issue template if you are using our instance or our `Bug Report (Self-Hosted)` issue template if you are hosting your own instance. This way we can look into your issue and find out wether we can reproduce it and improve the system.
 
 ## Tags
