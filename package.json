@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JDThralls/Guilddy.git"
+    "url": "https://github.com/Guilddy/Guilddy.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JDThralls/Guilddy/issues"
+    "url": "https://github.com/Guilddy/Guilddy/issues"
   },
-  "homepage": "https://github.com/JDThralls/Guilddy#readme",
+  "homepage": "https://github.com/Guilddy/Guilddy#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "discord.js": "^12.5.1",
