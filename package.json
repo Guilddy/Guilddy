@@ -18,22 +18,22 @@
   },
   "homepage": "https://github.com/Guilddy/Guilddy#readme",
   "dependencies": {
-    "axios": "^0.21.1",
-    "discord.js": "^12.5.1",
-    "dotenv": "^8.2.0",
+    "axios": "^0.24.0",
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
     "erlpack": "github:discord/erlpack",
-    "restify": "^8.5.1",
-    "socket.io": "^2.4.1",
-    "typeorm": "^0.2.29",
+    "restify": "^8.6.0",
+    "socket.io": "^4.4.0",
+    "typeorm": "^0.2.41",
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.14",
-    "@types/restify": "^8.4.2",
-    "@types/socket.io": "^2.1.12",
-    "chai": "^4.2.0",
-    "mocha": "^8.2.1",
+    "@types/chai": "^4.2.22",
+    "@types/node": "^16.11.9",
+    "@types/restify": "^8.5.4",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
     "nyc": "^15.1.0",
-    "typescript": "^3.9.7"
+    "typescript": "^4.5.2"
   }
 }
