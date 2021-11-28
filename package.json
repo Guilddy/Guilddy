@@ -19,12 +19,14 @@
   "homepage": "https://github.com/Guilddy/Guilddy#readme",
   "dependencies": {
     "axios": "^0.24.0",
+    "bufferutil": "^4.0.5",
     "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
     "erlpack": "github:discord/erlpack",
     "restify": "^8.6.0",
     "socket.io": "^4.4.0",
     "typeorm": "^0.2.41",
+    "utf-8-validate": "^5.0.7",
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {

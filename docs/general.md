@@ -28,9 +28,14 @@ is used for documentation purposes.
 ## Libraries
 
 - [Discord.js](https://github.com/discordjs/discord.js) as the main framework
+  - [zlib-sync](https://github.com/abalabahaha/zlib-sync) as an optional dependency for WebSocket data compression and inflation
+  - [erlpack](https://github.com/discord/erlpack) as an optional dependency for significantly faster WebSocket data (de)serialisation
+  - [bufferutil](https://github.com/websockets/bufferutil) as an optional dependency for a much faster WebSocket connection
+  - [utf-8-validate](https://www.npmjs.com/package/utf-8-validate) as an optional dependency in combination with bufferutil for much faster WebSocket processing
 - [dotenv](https://github.com/motdotla/dotenv) to ensure our configuration variables are where they belong
 - [TypeORM](https://typeorm.io/) for database connectios
 - [restify](http://restify.com/) for the RESTful API
-- [socket.io](https://socket.io/) for socket support
+- [socket.io](https://socket.io/) to provide socket support for the API
+- [axios](https://axios-http.com/) for asynchronous HTTP requests
 - [mocha](https://mochajs.org/) for testing
 - [istanbul](https://istanbul.js.org/) for test coverage results
