@@ -10,13 +10,13 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 # 4 space indentation
-[*.{js,ts,md}]
+[*.{js,ts}]
 charset = utf-8
 indent_style = space
 indent_size = 4
 
-# 2 space indentation for JSON and YAML files
-[*.{json,yml}]
+# 2 space indentation for JSON, YAML and MarkDown files
+[*.{json,yml,md}]
 charset = utf-8
 indent_style = space
 indent_size = 2
